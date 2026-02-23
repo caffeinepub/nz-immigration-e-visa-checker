@@ -1,0 +1,47 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-23T10:25:45.215Z",
+  "summary": "All five requirements (REQ-1 through REQ-5) are implemented in the diff. The backend actor stores visa applications with all required fields, provides a query function, and includes sample data seeding. The frontend implements a validated form, displays status results with visual indicators, and uses a professional government-style design with navy/gold color scheme, proper typography, and official portal aesthetics.",
+  "missing_requirements": [],
+  "hallucinated_features": [
+    {
+      "description": "Internet Identity authentication integration",
+      "reason": "The BuildRequest explicitly states 'Do not implement real authentication beyond Internet Identity if needed' as a constraint, and authentication is not mentioned in any requirement. However, the diff includes full Internet Identity provider setup (useInternetIdentity.ts hook, InternetIdentityProvider wrapper in main.tsx, and actor authentication logic in useActor.ts).",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/main.tsx"
+      ]
+    },
+    {
+      "description": "Query function only accepts reference number, not all three fields",
+      "reason": "REQ-1 AC states 'Backend provides a query function that accepts application reference, passport number, and date of birth', but the implemented getVisaApplication function only accepts referenceNumber as a parameter. The form collects all three fields but only uses referenceNumber for lookup.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    }
+  ],
+  "confidence": 0.92,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/components/VisaStatusForm.tsx",
+    "frontend/src/components/VisaStatusResult.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

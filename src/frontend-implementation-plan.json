@@ -1,0 +1,93 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "NZ Visa Checker Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-2",
+      "summary": "Build visa status check form with validation for application reference number, passport number, and date of birth",
+      "acceptanceCriteria": [
+        "Form includes labeled input fields for application reference number, passport number, and date of birth",
+        "All fields are validated before submission",
+        "Form displays validation errors for invalid or missing inputs",
+        "Submit button triggers status lookup"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/VisaStatusForm.tsx",
+          "operation": "create",
+          "description": "Create form component with input fields for application reference number, passport number, and date of birth. Implement field validation including required field checks, format validation for passport number and date of birth. Display validation errors inline. Handle form submission to call backend getVisaApplication function. Use shadcn/ui form components for consistent styling."
+        },
+        {
+          "path": "frontend/src/hooks/useVisaStatusCheck.ts",
+          "operation": "create",
+          "description": "Create custom hook to manage visa status check logic. Handle form submission, call backend getVisaApplication method with reference number, and manage loading, success, and error states. Return application data or error messages for display."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Integrate VisaStatusForm component and wire it into the main application view with Layout component wrapper."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Display visa application status results with application details in clear, organized layout",
+      "acceptanceCriteria": [
+        "Status results display all relevant application information",
+        "Current status is prominently displayed with appropriate visual indicators",
+        "Layout clearly organizes information for easy reading",
+        "Appropriate messaging shown when no application is found"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/VisaStatusResult.tsx",
+          "operation": "create",
+          "description": "Create result display component that shows visa application details including reference number, current status, application type, submission date, and last updated date. Display status prominently with color-coded visual indicators (green for Approved, blue for In Progress, yellow for Received, red for Declined). Organize information in clear sections with proper labels. Show 'No application found' message when result is null. Use shadcn/ui Card and Badge components for structured layout."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Integrate VisaStatusResult component and conditionally render it when application data is available from the useVisaStatusCheck hook."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create professional government-style interface with clean typography, formal color scheme, and official portal aesthetics",
+      "acceptanceCriteria": [
+        "Visual design uses professional government-style aesthetics with formal colors",
+        "Typography is clear and accessible with proper hierarchy",
+        "Layout conveys official trustworthiness and credibility",
+        "Interface follows conventions of government service portals"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update global styles to implement government-style design system. Define formal color palette with navy blue primary, neutral grays, and status colors (green, yellow, red). Set clear typographic hierarchy using system fonts. Apply professional spacing and layout conventions that convey official trustworthiness."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Configure Tailwind theme with government-portal color scheme including navy blue primary, neutral backgrounds, and formal accent colors. Define typography scale for clear hierarchy. Extend theme with custom spacing and border radius values appropriate for official government interfaces."
+        },
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "create",
+          "description": "Create header component with New Zealand emblem and official portal branding. Display site title 'NZ Visa Application Status Check' with formal typography. Include the generated New Zealand emblem image from frontend/public/assets/generated/nz-emblem.dim_120x120.png. Style with navy blue background and white text for government portal aesthetic."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create layout component that wraps main content with Header and establishes government-style page structure. Include hero section using the generated hero background image from frontend/public/assets/generated/hero-bg.dim_1920x400.png. Ensure consistent spacing, maximum width constraints, and centered content alignment typical of official portals."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap application content with Layout component to apply government-style header, hero section, and consistent page structure throughout the application."
+        }
+      ]
+    }
+  ]
+}

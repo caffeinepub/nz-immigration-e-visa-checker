@@ -1,0 +1,11 @@
+{
+  "frontend/src/App.tsx": "Main application component that manages visa status check flow, toggling between the form and result views based on user interaction.",
+  "frontend/src/components/Layout.tsx": "Layout wrapper component that provides consistent page structure with header, hero section with background image, and footer.",
+  "frontend/src/components/Header.tsx": "Government-style header displaying the NZ emblem and Immigration New Zealand branding with navy blue background.",
+  "frontend/src/components/Footer.tsx": "Footer component with important information sections, contact details, privacy notice, and attribution with caffeine.ai link.",
+  "frontend/src/components/VisaStatusForm.tsx": "Form component for entering visa application details with validation for reference number, passport number, and date of birth fields.",
+  "frontend/src/components/VisaStatusResult.tsx": "Results display component showing visa application status with color-coded indicators, application details, and next steps information.",
+  "frontend/src/hooks/useQueries.ts": "Custom React hook that manages visa status checking logic, calling the backend getVisaApplication method and handling loading and error states.",
+  "frontend/src/index.css": "Global styles with government-style OKLCH color system featuring navy blue primary, gold accents, and status-specific colors for light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with NZ government color palette, custom status colors, and professional typography for official portal aesthetics."
+}

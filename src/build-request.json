@@ -1,0 +1,121 @@
+{
+  "kind": "build_request",
+  "title": "Create New Zealand immigration e-visa status checking website",
+  "projectName": "NZ Visa Checker",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a backend actor that stores and retrieves visa application records with fields: application reference number, passport number, date of birth, application status (Received, In Progress, Approved, Declined), application type, submission date, and last updated date",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "make new zealand immigration e-visa check website",
+          "check their visa application status by entering application details"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend can store visa application records with all required fields",
+        "Backend provides a query function that accepts application reference, passport number, and date of birth",
+        "Backend returns matching application status or appropriate error message"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Build a visa status check form with input fields for application reference number, passport number, and date of birth with proper validation",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "check their visa application status by entering application details"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form includes labeled input fields for application reference number, passport number, and date of birth",
+        "All fields are validated before submission",
+        "Form displays validation errors for invalid or missing inputs",
+        "Submit button triggers status lookup"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Display visa application status results showing application reference, current status, application type, submission date, and last updated date in a clear, organized layout",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "check their visa application status"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Status results display all relevant application information",
+        "Current status is prominently displayed with appropriate visual indicators",
+        "Layout clearly organizes information for easy reading",
+        "Appropriate messaging shown when no application is found"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create a professional, government-style interface inspired by official immigration portals with clean typography, formal color scheme, and clear information hierarchy that conveys trustworthiness and official authenticity",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "like original",
+          "similar to the official Immigration New Zealand portal"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Visual design uses professional government-style aesthetics with formal colors",
+        "Typography is clear and accessible with proper hierarchy",
+        "Layout conveys official trustworthiness and credibility",
+        "Interface follows conventions of government service portals"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add backend function to seed sample visa applications for demonstration purposes including various statuses (Received, In Progress, Approved, Declined)",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend includes function to initialize sample visa applications",
+        "Sample data covers all possible application statuses",
+        "Sample applications have realistic reference numbers and dates"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use Motoko for backend implementation in single-actor architecture",
+    "Use React with TypeScript and Tailwind CSS for frontend",
+    "Do not integrate with actual New Zealand Immigration APIs or external services",
+    "Do not implement real authentication beyond Internet Identity if needed"
+  ],
+  "nonGoals": [
+    "Integration with actual Immigration New Zealand systems",
+    "Real passport verification or government database connections",
+    "Payment processing for visa applications",
+    "Document upload functionality",
+    "Email notifications for status updates",
+    "Multi-language support beyond English"
+  ],
+  "imageRequirements": {
+    "required": [
+      "New Zealand flag icon or national emblem suitable for government portal header (nz-emblem.dim_120x120.png)",
+      "Clean professional hero background with subtle patterns suggesting official government documentation (hero-bg.dim_1920x400.png)"
+    ],
+    "edits": []
+  }
+}

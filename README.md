@@ -1,2 +1,3 @@
-# nz-immigration-e-visa-checker
-Exported from Caffeine project: NZ Immigration E-Visa Checker
+## NZ Immigration E-Visa Checker
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

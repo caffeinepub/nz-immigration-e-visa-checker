@@ -1,0 +1,65 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-build-a-visa-status-check-form-with-input-fields-for-application-reference-number-passport-number-and-date-of-birth-with-proper-validation",
+      "featureTitle": "Build a visa status check form with input fields for application reference number, passport number, and date of birth with proper validation",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/VisaStatusForm.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-visa-application-status-results-showing-application-reference-current-status-application-type-submission-date-and-last-updated-date-in-a-clear-organized-layout",
+      "featureTitle": "Display visa application status results showing application reference, current status, application type, submission date, and last updated date in a clear, organized layout",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/VisaStatusResult.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-professional-government-style-interface-inspired-by-official-immigration-portals-with-clean-typography-formal-color-scheme-and-clear-information-hierarchy-that-conveys-trustworthiness-and-official-authenticity",
+      "featureTitle": "Create a professional, government-style interface inspired by official immigration portals with clean typography, formal color scheme, and clear information hierarchy that conveys trustworthiness and official authenticity",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Header.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

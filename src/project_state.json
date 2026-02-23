@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New Zealand immigration e-visa status checking website - a web application for users to check their visa application status by entering application details, similar to the official Immigration New Zealand portal",
+  "architectural_notes": [
+    "Web-based application for visa status checking",
+    "User input form for application details (application number, passport details, etc.)",
+    "Status display system showing application progress"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- New Zealand flag icon or national emblem suitable for government portal header (nz-emblem.dim_120x120.png)\n- Clean professional hero background with subtle patterns suggesting official government documentation (hero-bg.dim_1920x400.png)",
+  "existing_features": [
+    {
+      "id": "feature-build-a-visa-status-check-form-with-input-fields-for-application-reference-number-passport-number-and-date-of-birth-with-proper-validation",
+      "title": "Build a visa status check form with input fields for application reference number, passport number, and date of birth with proper validation",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-visa-application-status-results-showing-application-reference-current-status-application-type-submission-date-and-last-updated-date-in-a-clear-organized-layout",
+      "title": "Display visa application status results showing application reference, current status, application type, submission date, and last updated date in a clear, organized layout",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-professional-government-style-interface-inspired-by-official-immigration-portals-with-clean-typography-formal-color-scheme-and-clear-information-hierarchy-that-conveys-trustworthiness-and-official-authenticity",
+      "title": "Create a professional, government-style interface inspired by official immigration portals with clean typography, formal color scheme, and clear information hierarchy that conveys trustworthiness and official authenticity",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Visa status checking functionality with application detail input",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Clean user interface for visa status portal",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Create a backend actor that stores and retrieves visa application records with fields: application reference number, passport number, date of birth, application status (Received, In Progress, Approved, Declined), application type, submission date, and last updated date",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add backend function to seed sample visa applications for demonstration purposes including various statuses (Received, In Progress, Approved, Declined)",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "NZ Immigration E-Visa Checker",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
